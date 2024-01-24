@@ -16,7 +16,7 @@ namespace Phan_mem_quan_ly_bien_ban
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new InitForm());
         }
     }
 }

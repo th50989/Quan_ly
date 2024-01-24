@@ -1,0 +1,11 @@
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\bin\Debug\Phan_mem_quan_ly_bien_ban.exe.config
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\bin\Debug\Phan_mem_quan_ly_bien_ban.exe
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\bin\Debug\Phan_mem_quan_ly_bien_ban.pdb
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.csproj.AssemblyReference.cache
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.csproj.SuggestedBindingRedirects.cache
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.InitForm.resources
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.Properties.Resources.resources
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.csproj.GenerateResource.cache
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.csproj.CoreCompileInputs.cache
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.exe
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.pdb
