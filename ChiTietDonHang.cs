@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Phan_mem_quan_ly_bien_ban
 {
-    public partial class NhapThongTin : Form
+    public partial class ChiTietDonHang : Form
     {
-        public NhapThongTin()
+        public ChiTietDonHang()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

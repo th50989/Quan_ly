@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Phan_mem_quan_ly_bien_ban
 {
-    public partial class BienBan : Form
+    public partial class QuanLyNhanVien : Form
     {
-        public BienBan()
+        public QuanLyNhanVien()
         {
             InitializeComponent();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

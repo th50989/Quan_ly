@@ -17,24 +17,17 @@ namespace Phan_mem_quan_ly_bien_ban
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            AdminOption admin = new AdminOption();
+            admin.Show();
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
+            QuanLyDonHang quanLyDonHang = new QuanLyDonHang();  
+            quanLyDonHang.Show();
         }
     }
 }

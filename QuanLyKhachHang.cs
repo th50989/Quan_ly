@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Phan_mem_quan_ly_bien_ban
 {
-    public partial class TaoMoiCanBo : Form
+    public partial class QuanLyKhachHang : Form
     {
-        public TaoMoiCanBo()
+        public QuanLyKhachHang()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
