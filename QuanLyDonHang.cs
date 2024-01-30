@@ -26,5 +26,10 @@ namespace Phan_mem_quan_ly_bien_ban
         {
 
         }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

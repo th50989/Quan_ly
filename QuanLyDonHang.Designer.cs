@@ -35,22 +35,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -88,6 +88,7 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(142, 191);
             this.checkedListBox1.TabIndex = 3;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -122,6 +123,30 @@
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã Đơn Hàng";
+            this.columnHeader1.Width = 107;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Thời Gian Tạo Đơn";
+            this.columnHeader2.Width = 154;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Nhân Viên Tạo Đơn";
+            this.columnHeader4.Width = 151;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Khách Hàng";
+            this.columnHeader3.Width = 126;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Gía";
             // 
             // label6
             // 
@@ -167,21 +192,6 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "Cập Nhập Đơn hàng";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã Đơn Hàng";
-            this.columnHeader1.Width = 107;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Thời Gian Tạo Đơn";
-            this.columnHeader2.Width = 154;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Nhân Viên Tạo Đơn";
-            this.columnHeader4.Width = 151;
             // 
             // label9
             // 
@@ -233,15 +243,6 @@
             this.label11.Size = new System.Drawing.Size(34, 16);
             this.label11.TabIndex = 16;
             this.label11.Text = "SĐT";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Khách Hàng";
-            this.columnHeader3.Width = 126;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Gía";
             // 
             // QuanLyDonHang
             // 

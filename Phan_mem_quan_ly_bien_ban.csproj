@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,12 +53,24 @@
     <Compile Include="AdminOption.Designer.cs">
       <DependentUpon>AdminOption.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUS\ChiNhanhBUS.cs" />
+    <Compile Include="BUS\EmployeeBUS.cs" />
     <Compile Include="ChiTietDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChiTietDonHang.Designer.cs">
       <DependentUpon>ChiTietDonHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\ChiNhanhDAO.cs" />
+    <Compile Include="DAO\EmployeeDAO.cs" />
+    <Compile Include="DATA\DataProvider.cs" />
+    <Compile Include="do_an_phat_trien_phan_mem_udDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>do_an_phat_trien_phan_mem_udDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ChiNhanhDTO.cs" />
+    <Compile Include="DTO\EmployeeDTO.cs" />
     <Compile Include="InitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +133,17 @@
     <EmbeddedResource Include="QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="do_an_phat_trien_phan_mem_udDataSet.xsc">
+      <DependentUpon>do_an_phat_trien_phan_mem_udDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="do_an_phat_trien_phan_mem_udDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>do_an_phat_trien_phan_mem_udDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="do_an_phat_trien_phan_mem_udDataSet.xss">
+      <DependentUpon>do_an_phat_trien_phan_mem_udDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,5 +157,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
