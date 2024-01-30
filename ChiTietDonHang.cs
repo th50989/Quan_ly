@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Phan_mem_quan_ly_bien_ban
 {
-    public partial class DanhSachBienBan : Form
+    public partial class ChiTietDonHang : Form
     {
-        public DanhSachBienBan()
+        public ChiTietDonHang()
         {
             InitializeComponent();
         }

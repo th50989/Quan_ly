@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Phan_mem_quan_ly_bien_ban.BUS;
+using Phan_mem_quan_ly_bien_ban.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,29 +14,47 @@ namespace Phan_mem_quan_ly_bien_ban
 {
     public partial class InitForm : Form
     {
+        EmployeeBUS employeeBUS;
+        EmployeeDTO employeeDTO;
         public InitForm()
         {
             InitializeComponent();
+            employeeBUS = new EmployeeBUS();
+            employeeDTO = new EmployeeDTO();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+     
 
+        private void button2_Click(object sender, EventArgs e)
+        {   
+            string taiKhoan = textBox1.Text;
+            string matkhau = textBox2.Text;
+           
+
+            employeeDTO = employeeBUS.DangNhap(taiKhoan, matkhau);
+
+            if (employeeDTO == null)
+            {
+                MessageBox.Show("Dang Nhap SAI");
+            }
+            else
+            {
+                if(employeeDTO.isAdmin == true)
+                {
+                    AdminOption adminOption = new AdminOption();
+                    adminOption.Show();
+                }
+                else
+                {
+                    QuanLyDonHang quanLyDonHang = new QuanLyDonHang();
+                    quanLyDonHang.Show();
+                }
+                
+            }
+            
+            }
+           
+            
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
 }
+

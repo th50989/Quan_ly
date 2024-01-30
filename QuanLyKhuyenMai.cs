@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Phan_mem_quan_ly_bien_ban
 {
-    public partial class BienBan : Form
+    public partial class QuanLyKhuyenMai : Form
     {
-        public BienBan()
+        public QuanLyKhuyenMai()
         {
             InitializeComponent();
         }

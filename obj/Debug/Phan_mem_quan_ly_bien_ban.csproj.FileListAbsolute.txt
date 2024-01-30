@@ -9,3 +9,9 @@ D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj
 D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.csproj.CoreCompileInputs.cache
 D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.exe
 D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.pdb
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.AdminOption.resources
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.ChiTietDonHang.resources
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.QuanLyDonHang.resources
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.QuanLyKhachHang.resources
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.QuanLyKhuyenMai.resources
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.QuanLyNhanVien.resources

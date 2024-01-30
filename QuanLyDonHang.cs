@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace Phan_mem_quan_ly_bien_ban
 {
-    public partial class TaoMoiCanBo : Form
+    public partial class QuanLyDonHang : Form
     {
-        public TaoMoiCanBo()
+        public QuanLyDonHang()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void QuanLyDonHang_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
