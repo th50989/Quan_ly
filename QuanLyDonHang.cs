@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Phan_mem_quan_ly_bien_ban.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,12 @@ namespace Phan_mem_quan_ly_bien_ban
             InitializeComponent();
         }
 
+        public QuanLyDonHang(EmployeeDTO emp):this()
+        {
+            label6.Text = emp.tenNhanVien;
+            //label5.Text = emp.maNhanVien.ToString();
+        }
+
         private void QuanLyDonHang_Load(object sender, EventArgs e)
         {
 
@@ -28,6 +35,11 @@ namespace Phan_mem_quan_ly_bien_ban
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

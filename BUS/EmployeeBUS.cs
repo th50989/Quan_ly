@@ -21,18 +21,35 @@ namespace Phan_mem_quan_ly_bien_ban.BUS
             employeeDTO = new EmployeeDTO();
         }
 
+        public void deleteOne(string id)
+        {
+            int iD = int.Parse(id.ToString());
+            employeeDAO.deleteOne(iD);
+        }
+        public void updateOne(string id, string hoten, string taikhoan,string matkhau, string isadmin,int machinhanh)
+        {
+            int iD = int.Parse(id);
+            if(isadmin == "True")
+            {
+                isadmin = "1";
+            }else isadmin = "0";
+            byte isAdmin_ = Convert.ToByte(isadmin);
 
+            employeeDAO.updateOne(iD, hoten, taikhoan, matkhau,isAdmin_,machinhanh);
+        }
         public void addNew(string tenNV, string taikhoan, string matKhau, string isAdmin, int chiNhanhID)
         {
 
              // Chuyển đổi chuỗi số thành số nguyên
             
-            if(isAdmin == "1") {
-                isAdmin = "true";
+            if(isAdmin == "Admin") {
+                isAdmin = "1";
             }
-            else isAdmin = "false";
-            bool isAdmin_ = bool.Parse(isAdmin);
-            employeeDAO.addNew(tenNV, taikhoan, matKhau, isAdmin_,chiNhanhID);
+            else isAdmin = "0";
+            //bool isAdmin_ = bool.Parse(isAdmin);
+           // isAdmin = Convert.ToByte(isAdmin);
+            byte isAdmin_ = Convert.ToByte(isAdmin);
+            employeeDAO.addNew(tenNV, taikhoan, matKhau, isAdmin_, chiNhanhID);
 
         }
     
@@ -71,6 +88,9 @@ namespace Phan_mem_quan_ly_bien_ban.BUS
                 emp.taiKhoan = dr["taiKhoan"].ToString();
                 emp.matKhau = dr["matKhau"].ToString();
                 emp.maChiNhanh = int.Parse(dr["maChiNhanh"].ToString());
+                emp.isAdmin = bool.Parse(dr["isAdmin"].ToString());
+                Console.WriteLine("Truoc khi ep kieu :"+ emp.isAdmin.ToString());
+                Console.WriteLine("Sau khi ep kieu :" + bool.Parse(emp.isAdmin.ToString()));
                 employeeDTOs.Add(emp);
             }
 

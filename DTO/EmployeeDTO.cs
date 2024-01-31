@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Phan_mem_quan_ly_bien_ban.DTO
 {
-    internal class EmployeeDTO
+    public class EmployeeDTO
     {
         public int maNhanVien { get; set; }
         public string tenNhanVien { get; set; }
