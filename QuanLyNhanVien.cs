@@ -87,7 +87,10 @@ namespace Phan_mem_quan_ly_bien_ban
           
            //listView2.Clear();
            lstEmployeeDTO = employeeBUS.getEmployeeBaseOnChiNhanhID(int.Parse(e.Node.Tag.ToString()));
-           Console.WriteLine(lstEmployeeDTO.ToArray());
+           foreach(DTO.EmployeeDTO emp in lstEmployeeDTO)
+            {
+                Console.WriteLine(emp.isAdmin.ToString());
+            }    
             label7.Text = e.Node.Tag.ToString();
             //Load list view
             //List<DTO.EmployeeDTO> list = employeeBUS.getAll();
@@ -114,9 +117,77 @@ namespace Phan_mem_quan_ly_bien_ban
             string tenNV = textBox2.Text;
             string taiKhoan = textBox3.Text;
             string matkhau = textBox4.Text;
-            string isAdmin = "Admin";
-            employeeBUS.addNew(tenNV, taiKhoan, matkhau, isAdmin,int.Parse(label7.Text));
-           // dataGridView1.DataSource = lstEmployeeDTO;
+
+            string isAdmin = comboBox1.SelectedItem.ToString();
+           
+
+            List<EmployeeDTO> employeeDTOs = employeeBUS.getAll();
+            bool flag = false;
+            foreach(EmployeeDTO emp in employeeDTOs)
+            {
+                if(emp.taiKhoan == taiKhoan)
+                {
+                    MessageBox.Show("Tài Khoản Đã Tồn Tại");
+                    flag = true;
+                    break;
+                }    
+            }
+            if (flag == false)
+            {
+                employeeBUS.addNew(tenNV, taiKhoan, matkhau, isAdmin, int.Parse(label7.Text));
+                lstEmployeeDTO = employeeBUS.getEmployeeBaseOnChiNhanhID(int.Parse(label7.Text.ToString()));
+                dataGridView1.DataSource = lstEmployeeDTO;
+            }
+           
+            // dataGridView1.DataSource = lstEmployeeDTO;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.ColumnIndex == 1)
+            {
+                int id = (int)dataGridView1.Rows[e.RowIndex].Cells[2].Value;
+                string idd = id.ToString();
+                employeeBUS.deleteOne(idd);
+
+
+                lstEmployeeDTO = employeeBUS.getEmployeeBaseOnChiNhanhID(int.Parse(label7.Text.ToString()));
+                dataGridView1.DataSource = lstEmployeeDTO;
+
+            }
+            if (e.ColumnIndex == 0)
+            {
+                int id = (int)dataGridView1.Rows[e.RowIndex].Cells[2].Value;
+                string idd = id.ToString();
+                string hoten = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string taikhoan = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string matkhau = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                string isadmin = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                int machinhanh =(int)dataGridView1.Rows[e.RowIndex].Cells[7].Value;
+
+                Console.WriteLine(idd+hoten+taikhoan+matkhau+isadmin+machinhanh);
+                // studentBUS.updateOne(idd, hoten, diachi, email);
+
+                List<EmployeeDTO> employeeDTOs = employeeBUS.getAll();
+                bool flag = false;
+                foreach (EmployeeDTO employeeDTO in employeeDTOs)
+                {
+                    if(employeeDTO.taiKhoan == taikhoan)
+                    {
+                        MessageBox.Show("Tài Khoản Đã Tồn Tại");
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag == false)
+                {
+                    employeeBUS.updateOne(idd, hoten, taikhoan, matkhau, isadmin, machinhanh);
+                }
+                lstEmployeeDTO = employeeBUS.getEmployeeBaseOnChiNhanhID(int.Parse(label7.Text.ToString()));
+                dataGridView1.DataSource = lstEmployeeDTO;
+                // employeeBUS.updateOne(idd,hoten,taikhoan,matkhau,isadmin,machinhanh);
+            }
         }
     }
 }

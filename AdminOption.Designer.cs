@@ -153,6 +153,7 @@
             this.label7.Size = new System.Drawing.Size(44, 16);
             this.label7.TabIndex = 11;
             this.label7.Text = "label7";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // AdminOption
             // 
@@ -173,6 +174,7 @@
             this.Controls.Add(this.button1);
             this.Name = "AdminOption";
             this.Text = "AdminOption";
+            this.Load += new System.EventHandler(this.AdminOption_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

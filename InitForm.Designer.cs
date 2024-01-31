@@ -89,6 +89,7 @@
             this.Controls.Add(this.label1);
             this.Name = "InitForm";
             this.Text = "InitForm";
+            this.Load += new System.EventHandler(this.InitForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

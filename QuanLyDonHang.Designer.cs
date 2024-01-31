@@ -156,6 +156,7 @@
             this.label6.Size = new System.Drawing.Size(66, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Duy Quân";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 

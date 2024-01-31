@@ -17,8 +17,50 @@ namespace Phan_mem_quan_ly_bien_ban.DAO
         public EmployeeDAO() { 
             dataProvider = new DataProvider();
         }
+        public void updateOne(int id, string hoten, string taikhoan,string matkhau,byte isadmin, int machinhanh)
+        {
+            string query = "update nhanvien set tennhanvien = @hoten,taikhoan = @taikhoan,matkhau = @matkhau,isadmin = @isadmin, machinhanh = @macn where manhanvien = @manv ;";
 
-        public void addNew(string ten, string taiKhoan, string matkhau,bool isadmin, int machiNhanh)
+            SqlParameter[] sqlParameters = new SqlParameter[6];
+            sqlParameters[0] = new SqlParameter("@hoten", SqlDbType.VarChar)
+            {
+                Value = hoten
+            };
+            sqlParameters[1] = new SqlParameter("@taikhoan", SqlDbType.VarChar)
+            {
+                Value = taikhoan
+            };
+            sqlParameters[2] = new SqlParameter("@matkhau", SqlDbType.VarChar)
+            {
+                Value = matkhau
+            };
+            sqlParameters[3] = new SqlParameter("@isadmin", SqlDbType.Bit)
+            {
+                Value = isadmin
+            };
+            sqlParameters[4] = new SqlParameter("@macn", SqlDbType.Int)
+            {
+                Value = machinhanh
+            };
+            sqlParameters[5] = new SqlParameter("@manv", SqlDbType.Int)
+            {
+                Value = id
+            };
+            dataProvider.ExecuteQuery(query, sqlParameters);
+
+        }
+        public void deleteOne(int id)
+        {
+            string query = "delete from nhanvien where manhanvien = @manhanvien";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@manhanvien", SqlDbType.Int)
+            {
+                Value = id
+            };
+            dataProvider.ExecuteQuery(query, sqlParameters);
+        }
+
+        public void addNew(string ten, string taiKhoan, string matkhau,byte isadmin, int machiNhanh)
         {
             string query = "insert into nhanvien (tennhanvien,taikhoan,matkhau,isadmin,machinhanh)" +
                 " values(@ten,@taikhoan,@matkhau,@isadmin,@machinhanh);";

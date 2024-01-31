@@ -41,20 +41,23 @@ namespace Phan_mem_quan_ly_bien_ban
             {
                 if(employeeDTO.isAdmin == true)
                 {
-                    AdminOption adminOption = new AdminOption();
+                     AdminOption adminOption = new AdminOption(employeeDTO);
                     adminOption.Show();
                 }
                 else
                 {
-                    QuanLyDonHang quanLyDonHang = new QuanLyDonHang();
+                    QuanLyDonHang quanLyDonHang = new QuanLyDonHang(employeeDTO);
                     quanLyDonHang.Show();
                 }
                 
             }
             
             }
-           
-            
+
+        private void InitForm_Load(object sender, EventArgs e)
+        {
+
         }
+    }
 }
 
