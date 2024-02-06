@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="BUS\ChiNhanhBUS.cs" />
     <Compile Include="BUS\CouponBUS.cs" />
+    <Compile Include="BUS\CustomerBUS.cs" />
     <Compile Include="BUS\EmployeeBUS.cs" />
     <Compile Include="BUS\OrderBUS.cs" />
     <Compile Include="ChiTietDonHang.cs">
@@ -65,6 +66,7 @@
     </Compile>
     <Compile Include="DAO\ChiNhanhDAO.cs" />
     <Compile Include="DAO\CouponDAO.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\OrderDAO.cs" />
     <Compile Include="DATA\DataProvider.cs" />
@@ -80,6 +82,7 @@
     </Compile>
     <Compile Include="DTO\ChiNhanhDTO.cs" />
     <Compile Include="DTO\CouponDTO.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
     <Compile Include="DTO\EmployeeDTO.cs" />
     <Compile Include="DTO\OrderDTO.cs" />
     <Compile Include="InitForm.cs">
