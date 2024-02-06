@@ -31,11 +31,11 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(-5, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(806, 447);
+            this.listView1.Size = new System.Drawing.Size(1061, 447);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -68,7 +68,12 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Nhân Viên Tạo Đơn";
-            this.columnHeader2.Width = 100;
+            this.columnHeader2.Width = 150;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Chi Nhánh";
+            this.columnHeader8.Width = 90;
             // 
             // columnHeader3
             // 
@@ -78,35 +83,33 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "SĐT Khách Hàng";
-            this.columnHeader4.Width = 145;
+            this.columnHeader4.Width = 160;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Mã Khuyến Mãi";
-            this.columnHeader5.Width = 99;
+            this.columnHeader5.Width = 130;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Tên Khuyến Mãi";
-            this.columnHeader6.Width = 96;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Chi Nhánh";
+            this.columnHeader6.Width = 120;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Dịch Vụ Sử Dụng";
+            this.columnHeader9.Width = 120;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "Tổng Tiền";
+            this.columnHeader10.Width = 90;
             // 
             // ChiTietDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1058, 450);
             this.Controls.Add(this.listView1);
             this.Name = "ChiTietDonHang";
             this.Text = "ChiTietDonHang";

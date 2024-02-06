@@ -33,5 +33,16 @@ namespace Phan_mem_quan_ly_bien_ban.Properties {
                 return ((string)(this["do_an_phat_trien_phan_mem_udConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=do_an_ptpmud.mssql.somee.com;Initial Catalog=do_an_ptpmud;Persist Sec" +
+            "urity Info=True;User ID=tequiero_SQLLogin_1;Password=l8uzd8soo2")]
+        public string do_an_ptpmudConnectionString {
+            get {
+                return ((string)(this["do_an_ptpmudConnectionString"]));
+            }
+        }
     }
 }

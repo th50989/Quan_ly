@@ -99,7 +99,7 @@ namespace Phan_mem_quan_ly_bien_ban.DAO
              };
             sqlParameters[1] = new SqlParameter("@matkhau", SqlDbType.VarChar)
             {
-                Value = taikhoan
+                Value = matkhau
             };
 
             emp = dataProvider.ExecuteDangNhapQuery(query,sqlParameters);

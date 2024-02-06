@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using Phan_mem_quan_ly_bien_ban.DTO;
 
+
 namespace Phan_mem_quan_ly_bien_ban.DATA
 {
     internal class DataProvider
@@ -17,7 +18,7 @@ namespace Phan_mem_quan_ly_bien_ban.DATA
         public DataProvider()
         {
             myAdapter = new SqlDataAdapter();
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["do_an"].ConnectionString);
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["host_server"].ConnectionString);
         }
         private static SqlConnection OpenConnection()
         {
