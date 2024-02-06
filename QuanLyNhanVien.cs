@@ -27,6 +27,7 @@ namespace Phan_mem_quan_ly_bien_ban
             lstChiNhanhDTO = new List<DTO.ChiNhanhDTO>();
             chiNhanhBUS = new ChiNhanhBUS();    
             lstEmployeeDTO = new List<DTO.EmployeeDTO>();
+            comboBox1.SelectedIndex = 1;
       
         }
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
