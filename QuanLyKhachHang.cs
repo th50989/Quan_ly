@@ -58,7 +58,19 @@ namespace Phan_mem_quan_ly_bien_ban
 
         private void gridCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            CustomerDTO customerDTO = new CustomerDTO();
+            
+            customerDTO.tenKH = txtNameCustomer.Text;
+            customerDTO.sdt = mtxtPhoneCustomer.Text;
+            customerDTO.maKH = int.Parse(txtSnCustomer.Text);
+            LichSuMuaHang lichSuMuaHang = new LichSuMuaHang(customerDTO);
+            if (e.ColumnIndex == 0 )
+            {
+                
+              
+                lichSuMuaHang.Show();
+            }
+            
         }
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)
