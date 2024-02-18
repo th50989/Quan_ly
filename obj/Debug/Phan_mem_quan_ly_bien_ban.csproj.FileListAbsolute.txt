@@ -32,3 +32,4 @@ D:\Study\PTPMUD\Project\Quan_ly\obj\Debug\Phan_mem_quan_ly_bien_ban.csproj.CoreC
 D:\Study\PTPMUD\Project\Quan_ly\obj\Debug\Phan_mem_quan_ly_bien_ban.exe
 D:\Study\PTPMUD\Project\Quan_ly\obj\Debug\Phan_mem_quan_ly_bien_ban.pdb
 D:\Study\PTPMUD\Project\Quan_ly\obj\Debug\Phan_mem_quan_ly_bien_ban.LichSuMuaHang.resources
+D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.LichSuMuaHang.resources

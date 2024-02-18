@@ -15,11 +15,11 @@ namespace Phan_mem_quan_ly_bien_ban.BUS
         public OrderBUS() { 
             orderDAO = new OrderDAO();
         }
-        public List<OrderDTO> getAll()
+        public List<OrderDTO> getAll(int id)
         {
             List<OrderDTO> list = new List<OrderDTO>();
 
-            DataTable dataTable = orderDAO.getAll();
+            DataTable dataTable = orderDAO.getAll(id);
             foreach (DataRow dr in dataTable.Rows)
             {
                 OrderDTO ord = new OrderDTO();
@@ -76,6 +76,15 @@ namespace Phan_mem_quan_ly_bien_ban.BUS
                 list.Add(ord);
             }
             return list;
+        }
+
+        public void deleteOrder(int id)
+        {
+            orderDAO.deleteOne(id);
+        }
+        public void add(DateTime thoiGianTaoDon,float tongTien,int maNhanVien,int? maKhuyenMai,int maKhachHang ,List<string> chosenService)
+        {
+            orderDAO.addNew(thoiGianTaoDon, tongTien, maNhanVien, maKhuyenMai, maKhachHang, chosenService);
         }
     }
 }
