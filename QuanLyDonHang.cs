@@ -1,4 +1,5 @@
 ﻿using Phan_mem_quan_ly_bien_ban.BUS;
+using Phan_mem_quan_ly_bien_ban.DAO;
 using Phan_mem_quan_ly_bien_ban.DTO;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,9 @@ namespace Phan_mem_quan_ly_bien_ban
         ServiceBUS serviceBUS;
         List<ServiceDTO> serviceDTOs;
         List<string> chosenServices;
+
+        CouponBUS couponBUS;
+        CouponDTO couponDTO;
         int maDonHang;
         float moneyChange;
         int tempFlagCheck;
@@ -35,6 +39,8 @@ namespace Phan_mem_quan_ly_bien_ban
             orderBUS = new OrderBUS();
             serviceBUS = new ServiceBUS();
             serviceDTOs = new List<ServiceDTO>();
+            couponDTO = new CouponDTO();
+            couponBUS = new CouponBUS();
             chosenServices = new List<String>();
             label6.Text = emp.tenNhanVien;
             user = emp;
@@ -61,7 +67,11 @@ namespace Phan_mem_quan_ly_bien_ban
         public void load()
         {
             orderDTOs = orderBUS.getAll(user.maChiNhanh);
-          
+            foreach(OrderDTO order in orderDTOs)
+            {
+                Console.WriteLine(order.maDonHang + order.maKhachHang + order.maNhanVien + order.tenNhanVien + order.maKhuyenMai + order.tenKhachHang + order.thoiGianTaoDon + order.tongTien.ToString());
+            }
+            //orderDTOs = orderDTOs.Distinct().ToList();  
             foreach (OrderDTO orderDTO in orderDTOs)
             {
                 ListViewItem item = new ListViewItem(new String[] { orderDTO.maDonHang.ToString() });
@@ -70,7 +80,7 @@ namespace Phan_mem_quan_ly_bien_ban
                 item.SubItems.Add(orderDTO.tongTien.ToString());
                 item.SubItems.Add(orderDTO.maKhuyenMai.ToString());
                 item.SubItems.Add(orderDTO.tenKhachHang.ToString());
-                item.SubItems.Add(orderDTO.maKhachHang.ToString());
+                //item.SubItems.Add(orderDTO.maKhachHang.ToString());
 
                 this.listView1.Items.Add(item);
             }
@@ -178,11 +188,30 @@ namespace Phan_mem_quan_ly_bien_ban
         {
 
         }
+        static float TinhToan(float tongTien, string phepToanChuoi)
+        {
+            if (phepToanChuoi.StartsWith("*"))
+            {
+                // Phép toán nhân
+                float heSo = float.Parse(phepToanChuoi.Replace("*", ""));
+                return tongTien * heSo;
+            }
+            else if (phepToanChuoi.StartsWith("-"))
+            {
+                // Trừ trực tiếp
+                float soTru = float.Parse(phepToanChuoi.Replace("-", ""));
+                return tongTien - soTru;
+            }
+            // Các phép toán khác có thể được thêm vào tại đây
 
-        private void button1_Click(object sender, EventArgs e)
+            // Nếu không phải bất kỳ phép toán nào trên, trả về giá trị mặc định
+            return tongTien;
+        }
+    
+        private async void button1_Click (object sender, EventArgs e)
         {
             string sdt = textBox2.Text;
-            float tongtien =float.Parse( label2.Text);
+            float tongtien =float.Parse(label2.Text);
             DateTime now = DateTime.Now;
             int maNhanVien = user.maNhanVien;
             int? maKhuyenMai = null;
@@ -200,25 +229,52 @@ namespace Phan_mem_quan_ly_bien_ban
             if (string.IsNullOrEmpty(sdt)) {
                 MessageBox.Show("Vui long nhap SDT"); 
             }
-            else { 
-                CustomerBUS customerBUS = new CustomerBUS();
-                List<CustomerDTO> list = new List<CustomerDTO>();
-                list = customerBUS.getCustomerByPhone(sdt);
-                //so luong khach hang co sdt
-                if (list.Count > 0)
-                {
-                    
-                    orderBUS.add(now,tongtien,maNhanVien,maKhuyenMai,list[0].maKH,chosenServices);
-                    listView1.Items.Clear();
-                    checkedListBox1.Items.Clear();
-                    label2.Text = "0";
-                    moneyChange = 0;
-                    load();
-                }
-                else
-                {
-                    MessageBox.Show("SDT khong ton tai, vui long tao thong tin khach hang truoc");
-                }
+            else {
+              
+               
+                  
+                    CustomerBUS customerBUS = new CustomerBUS();
+                    List<CustomerDTO> list = new List<CustomerDTO>();
+                    list =  customerBUS.getCustomerByPhone(sdt);
+                    //so luong khach hang co sdt
+                    if (list.Count > 0)
+                    {
+                    if (string.IsNullOrEmpty(textBox1.Text))
+                    {
+                        orderBUS.add(now, tongtien, maNhanVien, maKhuyenMai, list[0].maKH, chosenServices);
+                        listView1.Items.Clear();
+                        checkedListBox1.Items.Clear();
+                        label2.Text = "0";
+                        moneyChange = 0;
+                        load();
+                    }
+                    else
+                    {
+                        couponDTO = couponBUS.CheckCoupon(textBox1.Text);
+
+                        if (couponDTO == null)
+                        {
+                            MessageBox.Show("Mã khuyến mãi k tồn tại");
+                        }
+                        tongtien = TinhToan(tongtien, couponDTO.desCription);
+                        Console.WriteLine(tongtien.ToString());
+                        label2.Text = tongtien.ToString();
+                        await Task.Run(() => MessageBox.Show("Tổng tiền sau khi giảm : " + tongtien));
+                        orderBUS.add(now, tongtien, maNhanVien, maKhuyenMai, list[0].maKH, chosenServices);
+                        listView1.Items.Clear();
+                        checkedListBox1.Items.Clear();
+                        label2.Text = "0";
+                        moneyChange = 0;
+                        load();
+                    }
+                       
+                    }
+                    else
+                    {
+                        MessageBox.Show("SDT khong ton tai, vui long tao thong tin khach hang truoc");
+                    }
+                
+              
             }
 
 

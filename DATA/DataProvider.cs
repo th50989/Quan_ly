@@ -82,6 +82,45 @@ namespace Phan_mem_quan_ly_bien_ban.DATA
             }
             return dataTable;
         }
+        public CouponDTO ExecuteCheckKhuyenMaiQuery(String _query, SqlParameter[] sqlParameter)
+        {
+            CouponDTO coupon = null;
+            SqlCommand myCommand = new SqlCommand();
+            DataTable dataTable = new DataTable();
+            //dataTable = null;
+            DataSet ds = new DataSet();
+            try
+            {
+                myCommand.Connection = OpenConnection();
+                myCommand.CommandText = _query;
+                myCommand.Parameters.AddRange(sqlParameter);
+                myCommand.ExecuteNonQuery();
+                myAdapter.SelectCommand = myCommand;
+                myAdapter.Fill(ds);
+                dataTable = ds.Tables[0];
+                if (dataTable.Rows.Count > 0)
+                {
+                    coupon = new CouponDTO();
+                    coupon.maKhuyenMai = int.Parse(dataTable.Rows[0][0].ToString()); // Access the value in the first column of the first row
+                    coupon.desCription = dataTable.Rows[0][1].ToString();
+                    coupon.tenKhuyenMai = dataTable.Rows[0][2].ToString();
+                    coupon.status = 1;
+                  
+                }
+            }
+
+            catch (SqlException e)
+            {
+                Console.Write("Error - Connection.executeSelectQuery - Query: " + _query + " \nException: " + e.StackTrace.ToString());
+                return null;
+            }
+            finally
+            {
+
+            }
+
+            return coupon;
+        }
         public EmployeeDTO ExecuteDangNhapQuery(String _query, SqlParameter[] sqlParameter)
         {
             EmployeeDTO employee = null;

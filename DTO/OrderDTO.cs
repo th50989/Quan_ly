@@ -19,7 +19,7 @@ namespace Phan_mem_quan_ly_bien_ban.DTO
 
         public string tenNhanVien { get;set; }
 
-     
+        
 
 
     }
