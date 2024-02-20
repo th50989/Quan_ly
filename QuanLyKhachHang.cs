@@ -37,7 +37,6 @@ namespace Phan_mem_quan_ly_bien_ban
             customerDTOs.Clear();
             customerDTOs = customerBUS.getAll();
             gridCustomer.DataSource = customerDTOs;
-        
         }
 
         private void gridCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
