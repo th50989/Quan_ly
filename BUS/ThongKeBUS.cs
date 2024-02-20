@@ -39,7 +39,7 @@ namespace Phan_mem_quan_ly_bien_ban.BUS
                     thongKe.TongTien = Convert.ToDecimal(dr["tongTien"]);
                     thongKe.TenDichVu = Convert.ToString(dr["tenDichVu"]);
                     thongKe.TenChiNhanh = Convert.ToString(dr["tenChiNhanh"]);
-
+                    thongKe.TenKhachHang = Convert.ToString(dr["tenKhachHang"]);
                     // Thêm DTO vào danh sách
                     list.Add(thongKe);
 
@@ -60,10 +60,21 @@ namespace Phan_mem_quan_ly_bien_ban.BUS
             return thongKeDAO.GetTenChiNhanh();
         }
 
+        public List<string> GetToanBoNhanVien(string selectedChiNhanh)
+        {
+            return thongKeDAO.GetToanBoNhanVien(selectedChiNhanh);
+        }
+
+
         // Phương thức để lấy dữ liệu thống kê dựa trên chi nhánh được chọn
         public List<ThongKeDTO> GetThongKeDataByChiNhanh(string selectedChiNhanh)
         {
             return thongKeDAO.GetThongKeDataByChiNhanh(selectedChiNhanh);
+        }
+
+        public List<ThongKeDTO> GetThongKeDataByNhanVien(string selectedNhanVien)
+        {
+            return thongKeDAO.GetThongKeDataByNhanVien(selectedNhanVien);
         }
 
         public decimal CalculateTotalRevenue(string selectedChiNhanh)
@@ -83,5 +94,13 @@ namespace Phan_mem_quan_ly_bien_ban.BUS
         public decimal totalOrderAll() {
             return thongKeDAO.totalOrderAll();
          }
+        public decimal totalCustomer(string selectedChiNhanh, string selectedNhanVien) 
+        {
+            return thongKeDAO.totalCustomer(selectedChiNhanh,  selectedNhanVien);
+        }
+        public decimal totalCustomerAll()
+        {
+            return thongKeDAO.totalCustomerAll();
+        }
     }
 }
