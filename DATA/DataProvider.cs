@@ -208,36 +208,6 @@ namespace Phan_mem_quan_ly_bien_ban.DATA
 
         }
 
-        // Phương thức để lấy dữ liệu từ view ThongKe
-        public DataTable GetThongKeData()
-        {
-            DataTable dataTable = new DataTable();
-
-            // Câu truy vấn để lấy dữ liệu từ view ThongKe
-            string query = "SELECT * FROM ThongKe";
-
-            try
-            {
-                using (SqlConnection connection = OpenConnection())
-                {
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                        {
-                            adapter.Fill(dataTable);
-                        }
-                    }
-                }
-            }
-            catch (SqlException e)
-            {
-                Console.Write("Error - DataProvider.GetThongKeData - Query: " + query + " \nException: " + e.StackTrace.ToString());
-                return null;
-            }
-
-            return dataTable;
-        }
-
         public object ExecuteScalar(string _query, SqlParameter[] parameters)
         {
 

@@ -39,6 +39,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cBox_NhanVien = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBox_KhachHang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.do_an_phat_trien_phan_mem_udDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doanphattrienphanmemudDataSetBindingSource)).BeginInit();
             this.grBox_ThongKe.SuspendLayout();
@@ -57,6 +61,10 @@
             // 
             // grBox_ThongKe
             // 
+            this.grBox_ThongKe.Controls.Add(this.txtBox_KhachHang);
+            this.grBox_ThongKe.Controls.Add(this.label5);
+            this.grBox_ThongKe.Controls.Add(this.cBox_NhanVien);
+            this.grBox_ThongKe.Controls.Add(this.label4);
             this.grBox_ThongKe.Controls.Add(this.cBox_ChiNhanh);
             this.grBox_ThongKe.Controls.Add(this.txtBox_DonHang);
             this.grBox_ThongKe.Controls.Add(this.label3);
@@ -75,23 +83,23 @@
             this.cBox_ChiNhanh.FormattingEnabled = true;
             this.cBox_ChiNhanh.Location = new System.Drawing.Point(128, 34);
             this.cBox_ChiNhanh.Name = "cBox_ChiNhanh";
-            this.cBox_ChiNhanh.Size = new System.Drawing.Size(194, 24);
+            this.cBox_ChiNhanh.Size = new System.Drawing.Size(138, 24);
             this.cBox_ChiNhanh.TabIndex = 6;
             this.cBox_ChiNhanh.SelectedIndexChanged += new System.EventHandler(this.CBox_ChiNhanh_SelectedIndexChanged);
             // 
             // txtBox_DonHang
             // 
-            this.txtBox_DonHang.Location = new System.Drawing.Point(128, 119);
+            this.txtBox_DonHang.Location = new System.Drawing.Point(447, 76);
             this.txtBox_DonHang.Name = "txtBox_DonHang";
             this.txtBox_DonHang.ReadOnly = true;
-            this.txtBox_DonHang.Size = new System.Drawing.Size(194, 22);
+            this.txtBox_DonHang.Size = new System.Drawing.Size(139, 22);
             this.txtBox_DonHang.TabIndex = 5;
             this.txtBox_DonHang.TextChanged += new System.EventHandler(this.txtBox_DonHang_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 122);
+            this.label3.Location = new System.Drawing.Point(302, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 16);
             this.label3.TabIndex = 4;
@@ -99,17 +107,17 @@
             // 
             // txtBox_DoanhThu
             // 
-            this.txtBox_DoanhThu.Location = new System.Drawing.Point(128, 77);
+            this.txtBox_DoanhThu.Location = new System.Drawing.Point(447, 34);
             this.txtBox_DoanhThu.Name = "txtBox_DoanhThu";
             this.txtBox_DoanhThu.ReadOnly = true;
-            this.txtBox_DoanhThu.Size = new System.Drawing.Size(194, 22);
+            this.txtBox_DoanhThu.Size = new System.Drawing.Size(139, 22);
             this.txtBox_DoanhThu.TabIndex = 3;
             this.txtBox_DoanhThu.TextChanged += new System.EventHandler(this.txtBox_DoanhThu_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 80);
+            this.label2.Location = new System.Drawing.Point(302, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 16);
             this.label2.TabIndex = 2;
@@ -134,6 +142,41 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 240);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Nhân Viên :";
+            // 
+            // cBox_NhanVien
+            // 
+            this.cBox_NhanVien.FormattingEnabled = true;
+            this.cBox_NhanVien.Location = new System.Drawing.Point(128, 73);
+            this.cBox_NhanVien.Name = "cBox_NhanVien";
+            this.cBox_NhanVien.Size = new System.Drawing.Size(138, 24);
+            this.cBox_NhanVien.TabIndex = 8;
+            this.cBox_NhanVien.SelectedIndexChanged += new System.EventHandler(this.CBox_NhanVien_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(302, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Số lượng khách hàng :";
+            // 
+            // txtBox_KhachHang
+            // 
+            this.txtBox_KhachHang.Location = new System.Drawing.Point(447, 114);
+            this.txtBox_KhachHang.Name = "txtBox_KhachHang";
+            this.txtBox_KhachHang.ReadOnly = true;
+            this.txtBox_KhachHang.Size = new System.Drawing.Size(139, 22);
+            this.txtBox_KhachHang.TabIndex = 10;
             // 
             // Statistic
             // 
@@ -165,5 +208,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtBox_DonHang;
         private System.Windows.Forms.ComboBox cBox_ChiNhanh;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cBox_NhanVien;
+        private System.Windows.Forms.TextBox txtBox_KhachHang;
+        private System.Windows.Forms.Label label5;
     }
 }

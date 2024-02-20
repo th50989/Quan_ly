@@ -14,5 +14,6 @@ namespace Phan_mem_quan_ly_bien_ban.DTO
         public decimal TongTien { get; set; }
         public string TenDichVu { get; set; }
         public string TenChiNhanh { get; set; }
+        public string TenKhachHang { get; set; }
     }
 }
