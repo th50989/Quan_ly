@@ -33,3 +33,21 @@ D:\Study\PTPMUD\Project\Quan_ly\obj\Debug\Phan_mem_quan_ly_bien_ban.exe
 D:\Study\PTPMUD\Project\Quan_ly\obj\Debug\Phan_mem_quan_ly_bien_ban.pdb
 D:\Study\PTPMUD\Project\Quan_ly\obj\Debug\Phan_mem_quan_ly_bien_ban.LichSuMuaHang.resources
 D:\StudySpace\School\PhatTrienPhanMemUngDung\Do_an\Phan_mem_quan_ly_bien_ban\obj\Debug\Phan_mem_quan_ly_bien_ban.LichSuMuaHang.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\bin\Debug\Phan_mem_quan_ly_bien_ban.exe.config
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\bin\Debug\Phan_mem_quan_ly_bien_ban.exe
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\bin\Debug\Phan_mem_quan_ly_bien_ban.pdb
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.AdminOption.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.ChiTietDonHang.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.InitForm.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.LichSuMuaHang.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.Properties.Resources.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.QuanLyDonHang.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.QuanLyKhachHang.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.QuanLyKhuyenMai.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.QuanLyNhanVien.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.Statistic.resources
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.exe
+C:\Users\Admin\Desktop\Deadline\Phát triển phần mềm ứng dụng\Project\obj\Debug\Phan_mem_quan_ly_bien_ban.pdb
