@@ -36,5 +36,12 @@ namespace Phan_mem_quan_ly_bien_ban.DAO
            
             return coupon;
         }
+        public DataTable getAll()
+        {
+            List<CouponDTO> coupons = new List<CouponDTO>();
+            string query = "select * from KhuyenMai";
+
+           return dataProvider.ExecuteSelectAllQuery(query);
+        }
     }
 }
