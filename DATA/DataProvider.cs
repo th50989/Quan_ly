@@ -207,6 +207,7 @@ namespace Phan_mem_quan_ly_bien_ban.DATA
             }
 
         }
+
         public object ExecuteScalar(string _query, SqlParameter[] parameters)
         {
 
