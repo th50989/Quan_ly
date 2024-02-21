@@ -59,6 +59,7 @@
     <Compile Include="BUS\EmployeeBUS.cs" />
     <Compile Include="BUS\OrderBUS.cs" />
     <Compile Include="BUS\ServiceBUS.cs" />
+    <Compile Include="BUS\ThongKeBUS.cs" />
     <Compile Include="ChiTietDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +72,7 @@
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\OrderDAO.cs" />
     <Compile Include="DAO\ServiceDAO.cs" />
+    <Compile Include="DAO\ThongKeDAO.cs" />
     <Compile Include="DATA\DataProvider.cs" />
     <Compile Include="do_an_phat_trien_phan_mem_udDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -88,6 +90,7 @@
     <Compile Include="DTO\EmployeeDTO.cs" />
     <Compile Include="DTO\OrderDTO.cs" />
     <Compile Include="DTO\ServiceDTO.cs" />
+    <Compile Include="DTO\ThongKeDTO.cs" />
     <Compile Include="InitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +129,12 @@
     <Compile Include="QuanLyNhanVien.Designer.cs">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Statistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistic.Designer.cs">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminOption.resx">
       <DependentUpon>AdminOption.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic.resx">
+      <DependentUpon>Statistic.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="do_an_phat_trien_phan_mem_udDataSet.xsc">
       <DependentUpon>do_an_phat_trien_phan_mem_udDataSet.xsd</DependentUpon>

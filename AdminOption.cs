@@ -60,5 +60,11 @@ namespace Phan_mem_quan_ly_bien_ban
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Statistic statistic = new Statistic();
+            statistic.Show();
+        }
     }
 }
